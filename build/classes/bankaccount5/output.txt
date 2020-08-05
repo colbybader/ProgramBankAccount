@@ -1,0 +1,125 @@
+
+****** Creating a BankAccount using the default constructor
+
+
+****** Printing it to see what is in it
+
+Account number: 1
+Name: classified
+Creation Date: Wed Nov 02 13:25:26 MST 2011
+Balance: 0.0
+Withdrawal limit: 300.0
+
+****** Creating another BankAccount using the parameterized constructor
+
+
+****** Printing it to see what is in it
+
+Account number: 2
+Name: Bill Gates
+Creation Date: Wed Nov 02 13:25:26 MST 2011
+Balance: 0.0
+Withdrawal limit: 300.0
+
+****** Creating another BankAccount using the parameterized constructor
+
+
+****** Printing it to see what is in it
+
+Account number: 3
+Name: Larry Fitzgerald
+Creation Date: Wed Nov 02 13:25:26 MST 2011
+Balance: 0.0
+Withdrawal limit: 300.0
+
+****** Telling it to withdraw some money (empty; should throw an exception)
+
+java.lang.IllegalArgumentException: Insufficient funds
+	at BankAccount.withdraw(BankAccount.java:50)
+	at Program5.main(Program5.java:62)
+
+****** Telling it to deposit 1565.25
+
+
+****** Telling it to return its balance
+
+The balance is: 1565.25
+
+****** Telling it to withdraw 2000 (insufficient funds; should throw an exception)
+
+java.lang.IllegalArgumentException: Insufficient funds
+	at BankAccount.withdraw(BankAccount.java:50)
+	at Program5.main(Program5.java:89)
+
+****** Telling it to deposit -40 (should throw an exception)
+
+java.lang.IllegalArgumentException: Cannot deposit negative cash
+	at BankAccount.deposit(BankAccount.java:34)
+	at Program5.main(Program5.java:102)
+
+****** Telling it to withdraw -30 (should throw an exception)
+
+java.lang.IllegalArgumentException: Cannot withdraw negative cash
+	at BankAccount.withdraw(BankAccount.java:48)
+	at Program5.main(Program5.java:115)
+
+****** Telling it to withdraw 400 (too much; thould throw an exception)
+
+java.lang.IllegalArgumentException: Withdrawal too large - limit is: 300.0
+	at BankAccount.withdraw(BankAccount.java:52)
+	at Program5.main(Program5.java:129)
+
+****** Telling it to withdraw 210 (not a multiple of 20; should throw an exception)
+
+java.lang.IllegalArgumentException: Must withdraw in multiples of 20
+	at BankAccount.withdraw(BankAccount.java:54)
+	at Program5.main(Program5.java:143)
+
+****** Telling it to withdraw 100 (should be OK)
+
+The account returned this much: 100.0
+
+****** Telling it to return its balance
+
+The balance is: 1465.25
+
+****** Telling it to change its limit to 800 (too big; should throw an exception)
+
+java.lang.IllegalArgumentException: Cannot change the limit to more than 500.0
+	at BankAccount.setLimit(BankAccount.java:74)
+	at Program5.main(Program5.java:171)
+
+****** Telling it to change its limit to -50 (negative; should throw an exception)
+
+java.lang.IllegalArgumentException: Cannot set withdrawal limit to negative number
+	at BankAccount.setLimit(BankAccount.java:72)
+	at Program5.main(Program5.java:184)
+
+****** Telling it to change its limit to 400 (should be OK)
+
+
+****** Telling it to return its balance
+
+The balance is: 1465.25
+
+****** Telling it to withdraw 400 (should be OK now)
+
+The account returned this much: 400.0
+
+****** Telling it to return its balance
+
+The balance is: 1065.25
+
+****** Printing it
+
+Account number: 3
+Name: Larry Fitzgerald
+Creation Date: Wed Nov 02 13:25:26 MST 2011
+Balance: 1065.25
+Withdrawal limit: 400.0
+
+****** Telling BankAccount to return the number of accounts
+
+BankAccount reports 3 account(s) so far
+
+--------------------------------------------------------
